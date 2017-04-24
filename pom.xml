@@ -12,7 +12,7 @@
     <parent>
         <groupId>com.tzg</groupId>
         <artifactId>framework-core</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
 
     <!-- ====================================================== -->
@@ -31,13 +31,6 @@
     <url>http://www.tzg.cn</url>
     <name>${project.artifactId}</name>
     <description>框架核心的包装。服务、组件、web等应用的根pom。</description>
-
-    <!-- ====================================================== -->
-    <!--                         属性定义                        -->
-    <!-- ====================================================== -->
-    <properties>
-        <tzg-framework-version>1.0.0-SNAPSHOT</tzg-framework-version>
-    </properties>
 
     <!-- ====================================================== -->
     <!--                 组件依赖（铜米内部jar依赖）               -->
@@ -59,13 +52,6 @@
             <version>${project.parent.version}</version>
         </dependency>
     </dependencies>
-
-    <!-- ====================================================== -->
-    <!--                 项目构建（铜米内部插件依赖）               -->
-    <!-- ====================================================== -->
-    <build>
-        <plugins/>
-    </build>
 
     <!-- ====================================================== -->
     <!-- 发布管理                                                -->
