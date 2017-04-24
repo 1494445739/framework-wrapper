@@ -1,0 +1,89 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- ====================================================== -->
+    <!--                         POM 版本                       -->
+    <!-- ====================================================== -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- ====================================================== -->
+    <!--                          父 POM                        -->
+    <!-- ====================================================== -->
+    <parent>
+        <groupId>com.tzg</groupId>
+        <artifactId>framework-core</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <!-- ====================================================== -->
+    <!--                         POM 类型                       -->
+    <!-- ====================================================== -->
+    <packaging>pom</packaging>
+
+    <!-- ====================================================== -->
+    <!--                         POM GAV                        -->
+    <!-- ====================================================== -->
+    <artifactId>framework-wrapper</artifactId>
+
+    <!-- ====================================================== -->
+    <!--                       项目名和组织                      -->
+    <!-- ====================================================== -->
+    <url>http://www.tzg.cn</url>
+    <name>${project.artifactId}</name>
+    <description>框架核心的包装。服务、组件、web等应用的根pom。</description>
+
+    <!-- ====================================================== -->
+    <!--                         属性定义                        -->
+    <!-- ====================================================== -->
+    <properties>
+        <tzg-framework-version>1.0.0-SNAPSHOT</tzg-framework-version>
+    </properties>
+
+    <!-- ====================================================== -->
+    <!--                 组件依赖（铜米内部jar依赖）               -->
+    <!-- ====================================================== -->
+    <dependencies>
+        <dependency>
+            <groupId>com.tzg</groupId>
+            <artifactId>framework-support</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tzg</groupId>
+            <artifactId>service-support</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tzg</groupId>
+            <artifactId>tool-support</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+    </dependencies>
+
+    <!-- ====================================================== -->
+    <!--                 项目构建（铜米内部插件依赖）               -->
+    <!-- ====================================================== -->
+    <build>
+        <plugins/>
+    </build>
+
+    <!-- ====================================================== -->
+    <!-- 发布管理                                                -->
+    <!--                                                        -->
+    <!--     1. dev-release  正式版本                            -->
+    <!--     2. dev-snapshot 快照版本                            -->
+    <!-- ====================================================== -->
+    <distributionManagement>
+        <repository>
+            <id>dev-release</id>
+            <name>dev-nexus-release</name>
+            <url>http://dev.maven.com:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>dev-nexus-snapshots</id>
+            <name>dev-nexus-snapshot</name>
+            <url>http://dev.maven.com:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>
