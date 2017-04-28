@@ -36,7 +36,6 @@
     <!--                   组件依赖（第三方依赖）                  -->
     <!-- ====================================================== -->
     <dependencies>
-
         <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-core</artifactId>
@@ -120,7 +119,6 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
         </dependency>
-
     </dependencies>
 
 </project>
