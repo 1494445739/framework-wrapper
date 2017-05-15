@@ -1,3 +1,3 @@
-1.0.1版本:
+V1.0.2:
 
-此版本只是配合framework-core进行了dependency重构。故只是修改了pom.xml里面的依赖配置
+配合添加zookeeper插件而带来的一整套组件升级，将原本的配置文件方式更改为zookeeper注册方式。
